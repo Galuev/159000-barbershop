@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
+      <div class="container clearfix">
         <nav class="main-navigation">
           <ul>
             <li>
@@ -36,7 +36,7 @@
       <div class="index-logo">
         <img src="img/index-logo.png" width="368" height="204" alt="Барбершоп «Бородинский»">
       </div>
-      <section class="features">
+      <section class="features clearfix">
         <div class="features-item">
           <b class="features-name">Быстро</b>
           <p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки!</p>
@@ -50,7 +50,7 @@
           <p>Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
         </div>
       </section>
-      <div class="index-content">
+      <div class="index-content clearfix">
         <div class="index-content-left">
           <h2 class="index-content-title">Новости</h2>
           <ul class="news-preview">
@@ -69,14 +69,16 @@
           <h2 class="index-content-title">Фотогалерея</h2>
           <div class="gallery">
             <figure class="gallery-content">
-              <img src="img/photo-1.jpg" width="286" height="164" alt="Инерьер барбершопа">
+              <a href="#">
+                <img src="img/photo-1.jpg" width="286" height="164" alt="Инерьер барбершопа">
+              </a>
             </figure>
             <button class="btn gallery-prev">Назад</button>
             <button class="btn gallery-next">Вперёд</button>
           </div>
         </div>
       </div>
-      <div class="index-content">
+      <div class="index-content clearfix">
         <div class="index-content-left">
           <h2 class="index-content-title">Контактная информация</h2>
           <p>
@@ -96,8 +98,8 @@
           <h2 class="index-content-title">Записаться</h2>
           <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
           <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
-            <input type="text" name="date" value="" placeholder="Дата">
-            <input type="text" name="time" value="" placeholder="Время">
+            <input type="date" name="date" value="" placeholder="Дата">
+            <input type="time" name="time" value="" placeholder="Время">
             <input type="text" name="name" value="" placeholder="Ваше имя">
             <input type="tel" name="phone" value="" placeholder="Телефон">
             <button class="btn" type="submit">Отправить</button>
@@ -106,24 +108,48 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
-        <section class="footer-contacts">
+      <div class="container clearfix">
+        <div class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
           <a href="#">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
-        </section>
-        <section class="footer-social">
-          <p>Давайте дружить!</p>
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        </section>
-        <section class="footer-copyright">
-          <p>Разработано:</p>
-          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-        </section>
+        </div>
+        <div class="footer-social">
+          <b>Давайте дружить!</b>
+          <ul class="socials">
+            <li><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
+            <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+            <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>Разработано:<br>
+            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </p>
+        </div>
       </div>
     </footer>
+    <!-- MODAL POPUPS -->
+    <div id="login-popup">
+      <span class="btn-close">X</span>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Личный кабинет</legend>
+          <p>Введите, пожалуйста, свой логин и пароль</p>
+          <input type="text" name="user-name" value="" placeholder="Логин">
+          <input type="password" name="user-name" value="" placeholder="Пароль">
+          <input type="checkbox" name="save-data" id="save-data" checked>
+          <label for="save-data">Запомните меня</label>
+          <a href="#">Я забыл пароль</a>
+          <a href="#" class="btn">Войти</a>
+        </fieldset>
+      </form>
+    </div>
+    <div id="modal-map">
+      <span class="btn-close">X</span>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124307!2d30.32089461648297!3d59.93879686904738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1454170203787" width="766" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <!-- /MODAL POPUPS -->
   </body>
 </html>

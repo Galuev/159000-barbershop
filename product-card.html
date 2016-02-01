@@ -8,15 +8,14 @@
   <body>
     <!-- HEADER -->
     <header class="main-header">
-      <div class="container">
-        <div class="main-logo">
-          <a href="index.html">
-            <img src="img/logo.png" width="111px" height="24px" alt="Барбершоп «Бородинский»">
-            <span>Барбершоп «Бородинский»</span>
-          </a>
-        </div>
+      <div class="container clearfix">
         <nav class="main-navigation">
           <ul>
+            <li class="navigation-logo">
+              <a href="index.html">
+                <img src="img/logo.png" width="111" height="24" alt="Барбершоп «Бородинский»">
+              </a>
+            </li>
             <li>
               <a href="#">Информация</a>
             </li>
@@ -26,28 +25,31 @@
             <li>
               <a href="#">Прайс-лист</a>
             </li>
-            <li>
-              <a href="#" class="main-navigation-current">Магазин</a>
+            <li class="main-navigation-current">
+              Магазин
             </li>
             <li>
               <a href="#">Контакты</a>
             </li>
           </ul>
         </nav>
+        <div class="user-block">
+          <a class="login" href="#">Вход</a>
+        </div>
       </div><!-- div.container -->
     </header>
     <!-- /HEADER -->
     <!-- MAIN -->
     <main class="container">
-      <article class="product-card">
+      <article class="product-card clearfix">
         <!-- heading + crumbs -->
-        <header class="product-header">
+        <header class="inner-page-header">
           <h1>Набор для путешествий «Baxter of California»</h1>
           <nav class="breadcrumbs">
-            <a href="index.html">Главная</a>
-            <a href="#">Магазин</a>
-            <a href="#">Средства для ухода</a>
-            <a href="#" class="breadcrumbs-current">Набор для путешествий «Baxter of California»</a>
+            <a href="index.html">Главная</a> <span class="hidden">></span>
+            <a href="#">Магазин</a> <span class="hidden">></span>
+            <a href="#">Средства для ухода</a> <span class="hidden">></span>
+            <span class="breadcrumbs-current">Набор для путешествий «Baxter of California»</span>
           </nav>
         </header>
         <!-- gallery -->
@@ -75,7 +77,7 @@
         </section>
         <!-- product info -->
         <section class="product-info">
-          <div class="product-data">
+          <div class="product-data clearfix">
             <div class="availability">
               Есть в наличии
             </div>
@@ -86,15 +88,13 @@
               </span>
             </div>
           </div>
-          <div class="product-description">
-            <p>
-              Travel Kit – необходимый аксессуар во время любого путешествия.
-              В аккуратной кожаной сумке находится все, что нужно для бритья
-              и ухода за кожей во время рабочей поездки или отдыха: средство
-              для умывания, увлажняющий крем, крем для бритья, крем после бритья,
-              шампунь. Набор также может стать отличным подарком.
-            </p>
-          </div>
+          <p class="product-description">
+            Travel Kit – необходимый аксессуар во время любого путешествия.
+            В аккуратной кожаной сумке находится все, что нужно для бритья
+            и ухода за кожей во время рабочей поездки или отдыха: средство
+            для умывания, увлажняющий крем, крем для бритья, крем после бритья,
+            шампунь. Набор также может стать отличным подарком.
+          </p>
           <div class="product-purchase">
             <span class="product-price">
               500
@@ -129,27 +129,48 @@
     </main>
     <!-- /MAIN -->
     <!-- FOOTER -->
-    <footer class="main-footer">
-      <div class="container">
-        <section class="footer-contacts">
+    <footer class="main-footer footer-inner-page">
+      <div class="container clearfix">
+        <div class="footer-contacts">
           Барбершоп «Бородинский»<br>
           Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
           <a href="#">Как нас найти?</a><br>
           Телефон: +7 (812) 666-02-66
-        </section>
-        <section class="footer-social">
-          <p>Давайте дружить!</p>
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        </section>
-        <section class="footer-copyright">
-          <p>Разработано:</p>
-          <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-        </section>
+        </div>
+        <div class="footer-social">
+          <b>Давайте дружить!</b>
+          <ul class="socials">
+            <li><a class="social-btn social-btn-vk" href="#">Вконтакте</a></li>
+            <li><a class="social-btn social-btn-fb" href="#">Фейсбук</a></li>
+            <li><a class="social-btn social-btn-inst" href="#">Инстаграм</a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>Разработано:
+            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </p>
+        </div>
       </div>
     </footer>
     <!-- /FOOTER -->
+    <!-- MODAL POPUPS -->
+    <div id="login-popup">
+      <span class="btn-close">X</span>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Личный кабинет</legend>
+          <p>Введите, пожалуйста, свой логин и пароль</p>
+          <input type="text" name="user-name" value="" placeholder="Логин">
+          <input type="password" name="user-name" value="" placeholder="Пароль">
+          <input type="checkbox" name="save-data" id="save-data" checked>
+          <label for="save-data">Запомните меня</label>
+          <a href="#">Я забыл пароль</a>
+          <a href="#" class="btn">Войти</a>
+        </fieldset>
+      </form>
+    </div>
+    <!-- /MODAL POPUPS -->
+
   </body>
 </html>
 
